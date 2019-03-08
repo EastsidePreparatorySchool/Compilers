@@ -56,7 +56,7 @@ public class Compiler {
         Util.println("Constant folding complete, folded " + cf.total + " expressions");
 
         // now create a code generator, passing on decorations from checker phase
-        CodeGenerator cgen = new CodeGenerator(checker.decs);
+        CodeGeneratorVx86 cgen = new CodeGeneratorVx86(checker.decs);
         ParseTreeWalker.DEFAULT.walk(cgen, tree);
         Program p = cgen.p;
         if (p == null) {

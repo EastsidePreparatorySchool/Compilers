@@ -20,12 +20,12 @@ import vx86.Vx86;
  *
  * @author gmein
  */
-public class CodeGenerator extends LOLcodeBaseListener {
+public class CodeGeneratorVx86 extends LOLcodeBaseListener {
 
     Program p;
     ParseTreeProperty<Decoration> decs;
 
-    public CodeGenerator(ParseTreeProperty<Decoration> decs) {
+    public CodeGeneratorVx86(ParseTreeProperty<Decoration> decs) {
         this.p = new Program(new ArrayList<>(), new LOLDefaultRuntime());
         this.decs = decs;
     }
